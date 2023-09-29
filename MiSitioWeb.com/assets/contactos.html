@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Contacto | Thomas Alva Edison</title>
+</head>
+<body class="dark-mode">
+    <header>
+        <h1 class="logo">Contacto | Thomas Alva Edison</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pagina1.html">Reseña Historica</a></li>
+            <li><a href="pagina2.html">Inventos</a></li>
+            <li><a href="pagina3.html">Datos Curiosos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Contacta con Nosotros</h2>
+
+        <p>Si te gustó cómo fue creada esta página, déjanos tus datos y con gusto te contactaremos:</p>
+
+        <!-- Formulario de Contacto -->
+        <form onsubmit="return mostrarMensaje();" id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+        <!-- Fin del Formulario de Contacto -->
+
+        <!-- Mensaje de Agradecimiento -->
+        <p id="mensaje-agradecimiento" style="display: none;">Pronto nos contactaremos contigo. ¡Gracias por tu tiempo!</p>
+        <!-- Fin del Mensaje de Agradecimiento -->
+
+        <p>Puedes ponerte en contacto con nosotros a través de los siguientes medios:</p>
+        <ul>
+            <li>Correo Electrónico: <a href="JLinaresPH@gmail.com">JLinaresPH@gmail.com</a></li>
+            <li>Teléfono: <a href="tel:+58 4126595214">+58 412-659-5214</a></li>
+            <li>Redes Sociales: <a href="https://www.instagram.com/jlinaresph/" target="_blank" rel="noopener">Instagram</a></li>
+        </ul>
+
+    </main>
+    <footer>
+        <p>&copy; 2023 Thomas Alba Edison</p>
+    </footer>
+
+    <!-- Script para mostrar el mensaje después de enviar el formulario -->
+    <script>
+        function mostrarMensaje() {
+            var nombre = document.getElementById('nombre').value;
+            var apellido = document.getElementById('apellido').value;
+            var email = document.getElementById('email').value;
+            var mensaje = document.getElementById('mensaje').value;
+
+            if (nombre === "" || apellido === "" || email === "" || mensaje === "") {
+                alert("Por favor, llenar todos los campos señalados para poder ponerte en contacto con nosotros.");
+                return false;
+            }
+
+            document.getElementById('formulario-contacto').style.display = 'none';
+            document.getElementById('mensaje-agradecimiento').style.display = 'block';
+            return false; // Evita que el formulario se envíe
+        }
+    </script>
+    <!-- Fin del Script -->
+</body>
+</html>

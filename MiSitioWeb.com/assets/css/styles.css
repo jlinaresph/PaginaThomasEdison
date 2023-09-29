@@ -1,0 +1,56 @@
+/* Estilos generales */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto blanco */
+}
+
+body.dark-mode {
+    background-color: #1a1a1af7; /* Fondo oscuro */
+    color: #ccc; /* Texto gris claro */
+}
+
+header {
+    background-color: #333; /* Azul oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #333; /* Azul oscuro */
+    padding: 0;
+    text-align: center;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s; /* Transición suave de color al pasar el ratón */
+}
+
+nav a:hover {
+    color: #4fa7d1; /* Azul claro al pasar el ratón */
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    background-color: #333; /* Azul oscuro */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilos específicos para páginas */
+/* Puedes añadir estilos específicos para las páginas de información */
